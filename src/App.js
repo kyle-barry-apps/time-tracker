@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import Layout from './components/Layout/Layout';
+import StatList from './components/Stats/StatList';
+import Profile from './components/Profile/Profile';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
+
+  const [userData, setUserData] = useState([])
+
+  const getJson = () => {
+    fetch('data.json'
+    ,{
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }
+    )
+    .then(resp => resp.json())
+    .then(json => setUserData(json))
+    .catch(err => console.log(err))
+  }
+
+  useEffect(() => { 
+    getJson()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Layout stats={userData} />
+    </>
   );
 }
 

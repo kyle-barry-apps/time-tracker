@@ -1,0 +1,72 @@
+.stat__work {
+  grid-area: work;
+}
+
+.stat__play {
+  grid-area: play;
+}
+
+.stat__study {
+  grid-area: study;
+}
+
+.stat__exercise {
+  grid-area: exercise;
+}
+
+.stat__social {
+  grid-area: social;
+}
+
+.stat__self-care {
+  grid-area: self-care;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.stat__background {
+  height: 3rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.stat__background img {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+}
+
+.stat__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat__description {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(226, 43%, 10%);
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 10px;
+  height: 100%;
+  flex: 3;
+}
+
+.stat__title {
+  font-size: 1rem;
+}
+
+.stat__time {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.stat__previous {
+  color: var(--profile-blue);
+}
