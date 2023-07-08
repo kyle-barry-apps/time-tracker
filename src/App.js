@@ -1,6 +1,5 @@
 import Layout from './components/Layout/Layout';
-import StatList from './components/Stats/StatList';
-import Profile from './components/Profile/Profile';
+import { TimeProvider } from './contexts/TimeContext';
 import { useState, useEffect } from 'react';
 import './App.css';
 
@@ -27,9 +26,9 @@ function App() {
   }, [])
 
   return (
-    <>
-    <Layout stats={userData} />
-    </>
+    <TimeProvider>
+      <Layout stats={userData} />
+    </TimeProvider>
   );
 }
 

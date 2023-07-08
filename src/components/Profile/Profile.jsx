@@ -1,7 +1,12 @@
-import React from 'react'
+import TimeContext from '../../contexts/TimeContext'
+import { useContext } from 'react'
 import './profile.css'
 
+
 const Profile = () => {
+
+  const { time, setTime } = useContext(TimeContext)
+
   return (
     <div className="profile">
       <div className="profile__description">
@@ -13,9 +18,9 @@ const Profile = () => {
       </div>
       <div className="profile__dates">
         <ul>
-          <li>Daily</li>
-          <li>Weekly</li>
-          <li>Monthly</li>
+          <li className={time === 'daily' ? 'active' : ''} onClick={() => setTime('daily')}>Daily</li>
+          <li className={time === 'weekly' ? 'active' : ''} onClick={() => setTime('weekly')}>Weekly</li>
+          <li className={time === 'monthly' ? 'active' : ''} onClick={() => setTime('monthly')}>Monthly</li>
         </ul>
       </div>
     </div>

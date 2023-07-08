@@ -55,6 +55,10 @@
   transition: .15s;
 }
 
+.profile__dates ul li.active {
+  color: white;
+}
+
 .profile__dates ul li:hover {
   color: white;
 }
