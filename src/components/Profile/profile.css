@@ -62,3 +62,30 @@
 .profile__dates ul li:hover {
   color: white;
 }
+
+@media (max-width: 1000px) {
+  .profile__description {
+    padding-bottom: 0rem;
+  } 
+}
+
+@media (max-width: 700px) {
+
+  .profile__dates ul {
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .profile__description {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 0rem;
+  }
+
+  .profile__data {
+    display: flex;
+    flex-direction: column;
+  }
+}

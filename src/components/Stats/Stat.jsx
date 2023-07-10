@@ -20,8 +20,11 @@ const Stat = ({stat}) => {
             <img src="../images/icon-ellipsis.svg" alt="ellipsis" />
           </div>
         </div>
-        <div className="stat__time">{time === 'daily' ? stat.timeframes.daily.current + 'hrs' : time === 'weekly' ? stat.timeframes.weekly.current + 'hrs' : stat.timeframes.monthly.current + 'hrs'}</div>
-        <div className="stat__previous">{time == 'daily' ? 'Yesterday - ' + stat.timeframes.daily.previous + 'hrs' : time === 'weekly' ? 'Last week - ' + stat.timeframes.weekly.previous + 'hrs' : 'Last month - ' + stat.timeframes.monthly.previous + 'hrs'} </div>
+        <div className="stat__times">
+          <div className="stat__time">{time === 'daily' ? stat.timeframes.daily.current + 'hrs' : time === 'weekly' ? stat.timeframes.weekly.current + 'hrs' : stat.timeframes.monthly.current + 'hrs'}</div>
+            <div className="stat__previous">{time == 'daily' ? 'Yesterday - ' + stat.timeframes.daily.previous + 'hrs' : time === 'weekly' ? 'Last week - ' + stat.timeframes.weekly.previous + 'hrs' : 'Last month - ' + stat.timeframes.monthly.previous + 'hrs'} </div>
+        </div>
+       
       </div>
     </div>
   )

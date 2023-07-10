@@ -13,8 +13,10 @@ const Profile = () => {
         <div className="profile__avatar">
           <img src="../images/image-jeremy.png" alt="profile" />
         </div>
-        <div className="profile__report">Report for</div>
-        <div className="profile__name">Jeremy Robson</div>
+        <div className="profile__data">
+          <div className="profile__report">Report for</div>
+          <div className="profile__name">Jeremy Robson</div>
+        </div>
       </div>
       <div className="profile__dates">
         <ul>

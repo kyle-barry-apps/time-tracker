@@ -43,7 +43,6 @@
 
 .stat__header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -58,6 +57,13 @@
   flex: 3;
 }
 
+.stat__options {
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+}
+
+
 .stat__title {
   font-size: 1rem;
 }
@@ -69,4 +75,20 @@
 
 .stat__previous {
   color: var(--profile-blue);
+}
+
+@media (max-width: 700px) {
+  .stat__description {
+    height: fit-content;
+  } 
+
+  .stat__times {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .stat__time {
+    font-size: 2rem;
+  }
 }
